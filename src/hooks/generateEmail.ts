@@ -208,7 +208,7 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
         </td>
         <td style="padding: 20px">
           <p style="color: #262626; font-weight: bold">Вікторія Шевченко,</p>
-          <p style="color: #262626">відповідальний за корпоративні зв’язки</p>
+          <p style="color: #262626">відповідальна за корпоративні зв’язки</p>
           <p>
             <a style="color: #262626" href="tel:+300678640104">
               +380 67 86 40 104
