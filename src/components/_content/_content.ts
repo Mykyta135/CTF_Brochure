@@ -94,10 +94,10 @@ export const whySection = {
 export const statisticsSection = {
   title: "Статистика",
   items: [
-    { title: 'facebook', value: 2100, img: socialMediaLogos[0] },
-    { title: 'instagram', value: 2900, img: socialMediaLogos[1] },
-    { title: 'linkedIn', value: 300, img: socialMediaLogos[2] },
-    { title: 'telegram', value: 800, img: socialMediaLogos[3] }
+    { title: 'facebook', value: 2100, img: socialMediaLogos[0], link: "https://www.facebook.com/BEST.Lviv/?locale=uk_UA" },
+    { title: 'instagram', value: 2900, img: socialMediaLogos[1], link: "https://www.instagram.com/best_lviv/"},
+    { title: 'linkedIn', value: 300, img: socialMediaLogos[2], link: "https://www.linkedin.com/company/bestlviv/mycompany/" },
+    { title: 'telegram', value: 800, img: socialMediaLogos[3], link: "https://t.me/s/bestlviv?after=560" }
   ],
   additionalInfo: [{
     title: "Більше 5 заходів щороку",
@@ -108,7 +108,6 @@ export const statisticsSection = {
   },],
   ourProjects: ourProjects
 }
-
 
 export const customersSection = {
   title: "Хто відвідує  CTF - змагання?",
