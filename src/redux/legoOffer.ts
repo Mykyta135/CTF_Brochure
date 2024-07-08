@@ -36,4 +36,4 @@ const checkboxReducer = (state = initialState, action: PayloadAction<string>) =>
   }
 };
 
-export default checkboxReducer.reducer;
+export default checkboxReducer;
