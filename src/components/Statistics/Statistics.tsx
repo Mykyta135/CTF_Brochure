@@ -12,10 +12,10 @@ const Statistics = () => {
                 <h2 className=' text-3xl  md:text-5xl  mb-16 text-center'>{statisticsSection.title}</h2>
                 <div  className="flex items-center flex-wrap md:justify-between justify-evenly gap-10 text-xl mb-36">
                     {statisticsSection.items.map((item, index) => (
-                        <div key={index} className="flex items-center basis-36 gap-2 rounded ">
+                        <a href={item.link} key={index} className="flex items-center basis-36 gap-2 rounded ">
                             <Image className="bg-white rounded-full " src={item.img} width={70} height={70} alt={item.title} />
                             <span>{item.value + "+"}</span>
-                        </div>))}
+                        </a>))}
                 </div>
            </motion.span>
 
