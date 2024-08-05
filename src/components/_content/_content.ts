@@ -1,4 +1,4 @@
-import { dataItem, iOptional, ModalParams } from "@/types";
+import { dataItem, iOptional } from "@/types";
 import { iSellingPoint } from "@/types";
 
 import facebookLogo from "../../public/facebook.svg"
@@ -136,7 +136,6 @@ export const sellingPoints: iSellingPoint[] = [
     active: false,
     name: "Brand",
     price: 300,
-    // annotation: "4 left",
     services: [
       "Пост про компанію в Instagram",
       `Згадка компанії в постівентному відео`,
