@@ -1,14 +1,11 @@
 import { dataItem, iOptional, ModalParams } from "@/types";
 import { iSellingPoint } from "@/types";
 
-
-
 import facebookLogo from "../../public/facebook.svg"
 import instagramLogo from "../../public/instagram.svg"
 import linkedinLogo from "../../public/linkedin.svg"
 import telegramLogo from "../../public/telegram.svg"
 import hackPhoto from "../../public/hack.jpg"
-
 
 import jeopardy from "../../public/jeopardyDiagram.svg"
 import jeopardyWeb from "../../public/web.svg"
