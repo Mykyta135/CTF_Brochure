@@ -11,7 +11,7 @@ function Customers() {
                 {customersSection().personType.map(item => (
                     <div key={item.title} className="basis-[400px] pt-4 px-4 pb-20 bg-[#222227] flex flex-col rounded-lg">
                         <h3 className="font-bold text-xl flex-grow">{item.title}</h3>
-                        <p className=''>{item.desc}</p>
+{/*                         <p className=''>{item.desc}</p> */}
                     </div>
 
                 ))}
