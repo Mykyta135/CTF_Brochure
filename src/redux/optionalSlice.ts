@@ -1,16 +1,20 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import {options} from "@/components/_content/_content"
+import { options } from "@/app/(_content)/_content"
+import { useTranslations } from 'next-intl';
 
-const initialState = options
+
+
+const initialState = options();
 
 const optionalPacketsSlice = createSlice({
     name: 'optional',
     initialState,
     reducers: {
-        toggleOptionActive: (state, action: PayloadAction<{ name: string }>) => {
-            const { name } = action.payload;
-            const option = state.find(sp => sp.name === name);
+        toggleOptionActive: (state, action: PayloadAction<string>) => {
+            const name = action.payload;
+            console.log(name);
+            const option = state.find(sp => sp.index === name);
             if (option) {
                 option.active = !option.active;
             }

@@ -1,6 +1,10 @@
 import { iSellingPoint, iOptional } from '@/types';
 
-export const generateMessage = (name: string, sellingPoints: iSellingPoint[], optionalPoints: iOptional[], activeOptionsPriceSum: number, selligPointsPriceSum: number, selectedCheckboxes: string[], totalSum: number, isDiscount: boolean): string => `<!DOCTYPE html>
+
+export const generateMessage = (name: string, sellingPoints: iSellingPoint[], optionalPoints: iOptional[], activeOptionsPriceSum: number, selligPointsPriceSum: number, selectedCheckboxes: string[], totalSum: number, isDiscount: boolean, t: any, activeOptionsTranslated: any): string => {
+
+
+  return `<!DOCTYPE html>
 
     <table
       cellpadding="0"
@@ -40,9 +44,9 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
     >
       <tr>
         <td align="center" style="padding: 20px">
-          <h1 style="color: #0F0F11">Вітаємо, ${name}!</h1>
+          <h1 style="color: #0F0F11">${t("greating")}, ${name}!</h1>
           <p style="color: #0F0F11">
-            Ви на крок ближче до участі в <span style = "font-size: 17px; font-weight: bold; color: #5F001B">BEST CTF</span> в ролі партнера!
+          ${t("greatingDesc1")} <span style='font-size: 17px; font-weight: bold; color: #5F001B'>${t("greatingDesc2")}</span> ${t("greatingDesc3")}
           </p>
         </td>
       </tr>
@@ -62,14 +66,14 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
       <tr>
         <td style="padding: 20px">
           <h2 style="color: #0F0F11">
-            Ваш вибір опцій співпраці виглядає так:
+            ${t("packageHeading")}
           </h2>
           <table cellpadding="10" cellspacing="0" width="100%">
             <tr>
               <th
                 style="text-align: left; background-color: #5F001B; color: #fff"
               >
-                Назва пакету
+               ${t("packageNameHeading")}
               </th>
               <th
                 style="
@@ -78,7 +82,7 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
                   color: #fff;
                 "
               >
-                Вартість (USD)
+                ${t("costHeading")}
               </th>
             </tr>
 
@@ -87,23 +91,23 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
     <td style="text-align: right">${sp.price}</td>
     
   </tr>
-  <tr style="text-align: left"><ul>${sp.name === "Flexible" ?selectedCheckboxes.map((item) => `<li>${item}</li>`) : ""}</ul></tr>`).join('')}
+  <tr style="text-align: left"><ul>${sp.name === "Flexible" ? selectedCheckboxes.map((item) => `<li>${item}</li>`) : ""}</ul></tr>`).join('')}
 
             <tr>
               <td colspan="2" style="text-align: right; padding-top: 10px">
-                Підсумок: $${selligPointsPriceSum}
+                ${t("packagePriceHeading")}: $${selligPointsPriceSum}
               </td>
             </tr>
           </table>
 
           ${optionalPoints.filter((opt) => opt.active).length > 0
-    ? `
+      ? `
     <table cellpadding="10" cellspacing="0" width="100%">
       <tr>
         <th
           style="text-align: left; background-color: #5F001B; color: #fff"
         >
-          Назва опції
+          ${t("additionalOptionsHeading")}
         </th>
         <th
           style="
@@ -112,32 +116,32 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
                   color: #fff;
                 "
         >
-          Вартість (USD)
+           ${t("costHeading")}
         </th>
       </tr>
 
       ${optionalPoints.map(op =>
-      `<tr>
-          <td style="text-align: left">${op.name}</td>
+        `<tr>
+          <td style="text-align: left">${activeOptionsTranslated(`${op.index}.heading`)}</td>
           <td style="text-align: right">${op.price}</td>
         </tr>`
-    ).join('')}
+      ).join('')}
 
       <tr>
         <td colspan="2" style="text-align: right; padding-top: 10px">
-          Підсумок: $${activeOptionsPriceSum}
+          ${t("packagePriceHeading")}: $${activeOptionsPriceSum}
         </td>
       </tr>
     </table>`
-    : ''}
+      : ''}
     
     ${isDiscount ?
-    `<p style="text-align: right; font-weight: 600;">
-      Вартість після знижки (-${selligPointsPriceSum +
-    activeOptionsPriceSum - totalSum}): ${totalSum}
+      `<p style="text-align: right; font-weight: 600;">
+      ${t("totalPriceHeadingDiscount")} (-${selligPointsPriceSum +
+      activeOptionsPriceSum - totalSum}): $${totalSum}
     </p>`
-    : `<p style="text-align: right; font-weight: 600;">
-      Загальна вартість: ${totalSum}
+      : `<p style="text-align: right; font-weight: 600;">
+      ${t("totalPriceHeadingDiscount")}: $${totalSum}
     </p>`}
     
         </td >
@@ -153,22 +157,20 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
       <tr>
         <td style="padding: 20px">
           <p style="color: #262626">
-            1. При купівлі одразу трьох додаткових опцій надається знижка -50$
+           ${t("discountDesc1")}
           </p>
           <p style="color: #262626">
-            2. При купівлі одразу двох пакетів надається знижка -50$
+            ${t("discountDesc2")}
           </p>
           <p style="color: #262626">
-            3. При купівлі одразу трьох пакетів надається знижка -150$
+            ${t("discountDesc3")}
           </p>
           <p style="color: #; font-weight: 600">
-            * Знижки не поєднуються.
+            ${t("discountDesc4")}
           </p>
 
           <p style="color: #262626">
-            Очікуйте, зовсім скоро з вами зв'яжуться організатори проєкту для
-            уточнення деталей та підтвердження участі. У випадку запитань
-            звертайтесь за контактами нижче.
+             ${t("description2")}
           </p>
           <p
             style="
@@ -178,7 +180,7 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
               font-weight: 600;
             "
           >
-            До зустрічі на BEST CTF!
+            ${t("farewell")}
           </p>
         </td>
       </tr>
@@ -192,8 +194,8 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
     >
       <tr>
         <td style="padding: 20px">
-          <p style="color: #262626; font-weight: bold">Анна Гащук,</p>
-          <p style="color: #262626">відповідальна за корпоративні зв’язки</p>
+          <p style="color: #262626; font-weight: bold">  ${t("name_surname3")},</p>
+          <p style="color: #262626">${t("coreteam2")}</p>
 
           <p>
             <a style="color: #262626" href="tel:+380960431261">
@@ -207,8 +209,8 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
           </p>
         </td>
         <td style="padding: 20px">
-          <p style="color: #262626; font-weight: bold">Вікторія Шевченко,</p>
-          <p style="color: #262626">відповідальна за корпоративні зв’язки</p>
+          <p style="color: #262626; font-weight: bold"> ${t("name_surname2")},</p>
+          <p style="color: #262626">${t("coreteam2")}</p>
           <p>
             <a style="color: #262626" href="tel:+300678640104">
               +380 67 86 40 104
@@ -223,3 +225,5 @@ export const generateMessage = (name: string, sellingPoints: iSellingPoint[], op
       </tr>
     </table>
 `
+}
+

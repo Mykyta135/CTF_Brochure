@@ -6,7 +6,7 @@ import { addSelected, removeSelected } from '@/redux/flexibleSlice';
 import { toggleModal } from "@/redux/modalSlice";
 import { ModalParams, dataItem, iSellingPoint } from "@/types";
 import { cn } from "@/lib/utils";
-import {flexibleOfferContent} from "@/components/_content/_content"
+import { sellingPointsText, flexibleOfferContent, sellingPointsExplanationText } from "@/app/(_content)/_content"
 import {
   Card,
   CardHeader,
@@ -20,15 +20,13 @@ import { Check, Info } from "lucide-react";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 
 import Modal from "./Modal";
-import { sellingPointsExplanation } from "../_content/_content";
+import { sellingPointsExplanation } from "@/app/(_content)/_content";
 import { Checkbox } from "../ui/checkbox";
 import { Label } from "../ui/label";
 import { motion } from "framer-motion";
-interface cartProps {
-  selectedCheckboxesProps: string[],
-  setSelectedCheckboxes: any
-}
-import { offerContent } from "@/components/_content/_content";
+
+import { offerContent } from "@/app/(_content)/_content";
+
 
 const Offer = ({
   name,
@@ -37,6 +35,7 @@ const Offer = ({
   annotation,
   active,
   compulsory,
+  explanation
 }: iSellingPoint) => {
   const dispatch = useDispatch();
 
@@ -69,7 +68,7 @@ const Offer = ({
       <Card
         onClick={handleTogglePacket}
         className={cn(
-          "flex flex-col relative max-w-2xl basis-[300px] border-2 transition-all bg-[#222227] cursor-pointer hover:bg-[#26262d] ",
+          "flex flex-col relative max-w-2xl basis-[300px] border-2 border-neutral-700 transition-all bg-[#222227] cursor-pointer hover:bg-[#26262d] ",
           active && "border-red-700 dark:border-red-700"
         )}
       >
@@ -90,7 +89,7 @@ const Offer = ({
                   variant={"ghost"}
                   className="p-1 "
                   onClick={() => {
-                    handleModal({ name, modalData: sellingPointsExplanation[name] as any });
+                    handleModal({ name, modalData: explanation as dataItem[] });
                   }}
                 >
                   <Info strokeWidth={1.5} className="hover:bg-gray-600 rounded-full transition" />
@@ -102,12 +101,13 @@ const Offer = ({
         </CardHeader>
         <CardContent className="flex flex-col gap-3 flex-1">
           {services.map((s, index) => (
-            <div key={index} className="flex gap-2">
-              <Check className="flex-shrink-0 " strokeWidth={3} width={19} />
-              <p key={index} className="text-md font-medium ">
-                {s}
-              </p>
-            </div>
+            s != "Elite.service5" ?
+              <div key={index} className="flex gap-2">
+                <Check className="flex-shrink-0 " strokeWidth={3} width={19} />
+                <p key={index} className="text-md font-medium ">
+                  {s}
+                </p>
+              </div> : null
           ))}
         </CardContent>
 
@@ -116,7 +116,7 @@ const Offer = ({
       <Card
 
         className={cn(
-          "flex flex-col relative max-w-2xl basis-[300px] border-2 transition-all bg-[#222227]",
+          "flex flex-col border-2 border-neutral-700 relative max-w-2xl basis-[300px] transition-all bg-[#222227]",
           active && "border-red-700 dark:border-red-700"
         )}
       >
@@ -137,7 +137,7 @@ const Offer = ({
                   variant={"ghost"}
                   className="p-1 "
                   onClick={() => {
-                    handleModal({ name, modalData: sellingPointsExplanation[name] as any });
+                    handleModal({ name, modalData: explanation as dataItem[] });
                   }}
                 >
                   <Info strokeWidth={1.5} className="hover:bg-gray-600 rounded-full transition" />
@@ -148,26 +148,25 @@ const Offer = ({
           </div>
         </CardHeader>
         <CardContent className="flex flex-col gap-2 flex-1">
-          {services.map((s, index) => (
-          
-              <Label key={index} htmlFor={`${index}`} className={cn("font-light text-lg cursor-pointer hover:text-gray-400 transition py-1", {
-                "text-gray-500 pointer-events-none select-none ": isFlexibleCondition(s)
-              })}>
-                <Checkbox id={`${index}`}
-                  className={cn("mr-2", {
-                    "pointer-events-none": isFlexibleCondition(s)
-                  })}
-                  onClick={() => handleCheckboxChange(s)}
+          {services.map((s, index) => (!(s === "Flexible.service8" || s === "Flexible.service9") &&
+            <Label key={index} htmlFor={`${index}`} className={cn("font-light text-lg cursor-pointer hover:text-gray-400 transition py-1", {
+              "text-gray-500 pointer-events-none select-none ": isFlexibleCondition(s)
+            })}>
+              <Checkbox id={`${index}`}
+                className={cn("mr-2 border border-neutral-50", {
+                  "pointer-events-none": isFlexibleCondition(s)
+                })}
+                onClick={() => handleCheckboxChange(s)}
 
-                />
+              />
 
-                {s}
-              </Label>
-            
+              {s}
+            </Label>
+
           ))}
         </CardContent>
         <CardFooter>
-          <Button onClick={handleTogglePacket} className="w-full">{flexibleOfferContent.buttonHeading}</Button>
+          <Button onClick={handleTogglePacket} className="w-full">{flexibleOfferContent().buttonHeading}</Button>
         </CardFooter>
       </Card>
   );
@@ -179,20 +178,23 @@ export default function Offers() {
 
   return (
     <motion.section initial={{ opacity: 0, y: -20 }}
-    whileInView={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
       className="min-h-screen flex flex-col items-center justify-center px-6 mx-auto  gap-8 my-10"
       id="offers"
     >
       <h2 className={`text-3xl  md:text-5xl text-center`}>
-        {offerContent.heading}
+        {offerContent().heading}
       </h2>
       <div className="flex flex-wrap justify-center gap-10">
-        {sellingPoints.map((sp) => {
-          return <Offer key={sp.name} {...sp} />;
+        {sellingPoints.map((sp, i) => {
+          const annotation = sellingPointsText()[i].annotation;
+          const services = sellingPointsText()[i].services;
+          const explanation = sellingPointsExplanationText()[i];
+          return <Offer key={sp.name} {...sp} annotation={annotation} services={services} explanation={explanation}></Offer>;
         })}
       </div>
       <p className={` text-lg md:text-2xl`}>
-        {offerContent.desc}
+        {offerContent().desc}
       </p>
     </motion.section>
   );

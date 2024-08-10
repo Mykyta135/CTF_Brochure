@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import { forPartnersSection } from "@/components/_content/_content"
+import { forPartnersSection } from "@/app/(_content)/_content"
 
 import jeopardyWeb from "../../public/web.svg"
 import jeopardyCrypto from "../../public/crypto.svg"
@@ -14,15 +14,15 @@ import { motion } from 'framer-motion'
 const ForPartners = () => {
   return (
     <section className='container flex flex-col items-center pb-40'>
-     <motion.span initial={{ opacity: 0, y: -20 }}
+      <motion.span initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }} >
-        <h2 className='text-3xl  md:text-5xl  mb-6 text-center'>{forPartnersSection.title} </h2>
-        <p className='max-w-4xl mb-60 text-center'>{forPartnersSection.description}</p>
-     </motion.span>
+        <h2 className='text-3xl  md:text-5xl  mb-6 text-center'>{forPartnersSection().title} </h2>
+        <p className='max-w-4xl mb-60 text-center'>{forPartnersSection().description}</p>
+      </motion.span>
       <motion.div initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }} className="relative w-[200px] lg:w-[400px]">
-      
-        <Image src={forPartnersSection.img} alt={"jeopardy"}></Image>
+
+        <Image src={forPartnersSection().img} alt={"jeopardy"}></Image>
 
         <Image className='absolute -top-[25px] lg:-right-[80px] -right-[45px] lg:w-[77px] w-12' src={jeopardyWeb} alt={"jeopardyWeb"} width={77}></Image>
         <Image className='absolute lg:-top-[150px] -top-[90px] right-1/2 translate-x-1/2 lg:w-[180px] w-28' src={jeopardyForensic} alt={"jeopardyForensic"} width={180}></Image>
@@ -33,9 +33,9 @@ const ForPartners = () => {
 
 
         <Image className='absolute lg:-bottom-[160px] -bottom-[85px] right-1/2 translate-x-1/2 lg:w-[90px] w-12' src={jeopardyMisc} alt={"jeopardyMisc"} width={90}></Image>
-    
-      
-      
+
+
+
 
       </motion.div>
 

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { sellingPoints } from "@/components/_content/_content";
+import { sellingPoints } from "@/app/(_content)/_content";
 
 
 // Initialize chosenSponsorships with compulsory items
