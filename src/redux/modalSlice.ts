@@ -14,6 +14,7 @@ const modalSlice = createSlice({
     initialState,
     reducers: {
         toggleModal: (state, action: PayloadAction<ModalParams>) => {
+            // action.payload.modalData.heading
             return {
                 showModal: !state.showModal,
                 name: action.payload.name,

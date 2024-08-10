@@ -1,0 +1,287 @@
+{
+    "headerNavigation": {
+        "name1": "About us",
+        "name2": "Statistics",
+        "name3": "Contacts"
+    },
+    "intro": {
+        "date": "November 16-17",
+        "subtitle": "To know how to defend, you need to know how to attack",
+        "button": "Become a partner"
+    },
+    "descriptionSection": {
+        "title": "About our event",
+        "titleDescription1": "BEST CTF (Capture The Flag) is a team competition in information security, where teams try to find more vulnerabilities in the system and, using them, get secret data (flags).",
+        "titleDescription2": "We are holding the first CTF competition in Lviv, which is a unique opportunity for you to contribute to the development of ethical hacking among students."
+    },
+    "forPartnersSection": {
+        "title": "The competition format is Jeopardy",
+        "description": "Jeopardy is one of the CTF-competition formats, where teams are given a set of independent tasks of varying complexity and subject matter. Tasks are classified by categories, each of which has its own point equivalent, taking into account the difficulty. Participants try to solve as many tasks as possible in a set time, and according to the number of points, their place in the real-time ranking is determined."
+    },
+    "whySection": {
+        "title": "Why should you support CTF competitions?",
+        "title1": "Contributing to the future of cybersecurity",
+        "desc1": "Be part of the development of the next generation of cybersecurity by supporting new talent and innovative solutions.",
+        "title2": "Increasing brand awareness",
+        "desc2": "Expand your influence among students and young professionals who may become your future employees.",
+        "title3": "Effective PR",
+        "desc3": "Involvement in CTF competitions attracts the attention of your target audience and contributes to the formation of a positive image of your company.",
+        "title4": "Identifying talent",
+        "desc4": "Find talented participants who can become promising employees.",
+        "title5": "Competitive advantage",
+        "desc5": "Supporting new talent gives your company a competitive advantage in the future through brand recognition."
+    },
+    "statisticsSection": {
+        "title": "Statistics",
+        "title1": "More than 5 events yearly",
+        "desc1": "Our events allow students to regularly gain valuable experience and network with experts in their field.",
+        "title2": "850+ active students",
+        "desc2": "Every year, hundreds of students attend our events, develop and grow with us."
+    },
+    "customersSection": {
+        "title": "Who attends CTF competitions?",
+        "title1": "Students of technical specialties, including information technology, computer science, and cybersecurity.",
+        "title2": "Young professionals aged 17-22 who want to develop their skills and knowledge in the field of information security",
+        "title3": "Individuals interested in cybersecurity and ethical hacking who want to improve their skills and showcase their talents",
+        "field1": "Distributed Information Systems and Technologies",
+        "field2": "Computer Science",
+        "field3": "Cybersecurity",
+        "field4": "System Analysis",
+        "field5": "Software Engineering",
+        "field6": "Information and Communication Systems",
+        "field7": "System Engineering (Internet of Things)",
+        "field8": "Applied Mathematics",
+        "field9": "Telecommunications and Radio Engineering"
+    },
+    "Essential": {
+        "name": "Essential",
+        "annotation": "Must have",
+        "service1": "Company logo on the brand wall and on the event website",
+        "service2": "Mention of the company in the post-event video",
+        "service3": "Post-digest in Telegram",
+        "service4": "Promotion on information stands"
+    },
+    "Brand": {
+        "name": "Brand",
+        "service1": "Post about the company on Instagram",
+        "service2": "Placing a company banner during the competition",
+        "service3": "Promotion on LinkedIn or TikTok",
+        "service4": "Interactive Instagram Stories or Reels"
+    },
+    "Elite": {
+        "name": "Brand",
+        "annotation": "4 packages left",
+        "service1": "Logo on participants and organizers' T-shirts",
+        "service2": "Participation in the podcast",
+        "service3": "Access to the CV database of participants",
+        "service4": "Live broadcast on Instagram profile with a company representative"
+    },
+    "Flexible": {
+        "name": "Flexible",
+        "annotation": "4 options to choose from",
+        "service1": "Game `Treasure hunt`",
+        "service2": "Sending out vacancies in a Telegram bot",
+        "service3": "Post about the company on Instagram",
+        "service4": "Nomination from the company",
+        "service5": "Placing a company banner during the competition",
+        "service6": "Promotion on LinkedIn or TikTok",
+        "service7": "Access to the CV database of participants"
+    },
+    "ExplanationEssential": {
+        "type1": {
+            "heading": "Company logo on the brand wall and event website",
+            "details": "We will place your logo on the brand wall, a large banner with the logos of all event partners that will be displayed during the event. Your logo will also be featured on the official event website, providing additional visibility for your brand."
+        },
+        "type2": {
+            "heading": "Company logo in the post-event video",
+            "details": "Your company logo will be included in the post-event video that will be published on the @best_lviv Instagram profile after the event. This video will summarize all the key moments of the competition and provide additional brand exposure."
+        },
+        "type3": {
+            "heading": "Post-digest on Telegram",
+            "details": "Information about your company will be featured in a post about all the partners on the BEST Lviv Students Telegram channel. This will allow you to reach a wide audience that follows our events."
+        },
+        "type4": {
+            "heading": "Promotion on information stands",
+            "details": "Your 30-second promotional video will be featured on the information stands at the National University `Lviv Polytechnic` (NULP) for an entire week, increasing your visibility among students before the competition begins."
+        }
+    },
+    "ExplanationBrand": {
+        "type1": {
+            "heading": "Post about the company on Instagram",
+            "details": "We will publish a post about your company on the Instagram profile @best_lviv. This post will contain information about the company and will mention that you are one of the main partners of our CTF competitions."
+        },
+        "type2": {
+            "heading": "Placing a company banner during the competition",
+            "details": "During the CTF competitions, we will place your banner, which you will provide to us before the start of the competition. This will ensure maximum visibility for the participants and guests of the event and will be an effective way to increase your brand awareness among the target audience."
+        },
+        "type3": {
+            "heading": "Promotion on LinkedIn or TikTok",
+            "details": "Sharing a post on the BEST Lviv LinkedIn page with brief information about your company, company achievements, and partnership information. The text is sent by your company and published during the competition or after the event. Alternatively, we will shoot a personalized video about your company up to 30 seconds in TikTok BEST Lviv. You can choose only one type of promotion from the options offered."
+        },
+        "type4": {
+            "heading": "Interactive Instagram Stories or Reels",
+            "details": "Together with our team, we will create content to promote Instagram Stories or Reels on the @best_lviv page. Examples of interactive content: `Question and Answer` section, `How our employee's day goes` section, etc. The company will have the opportunity to create a maximum of 5 such Instagram Stories or 1 Reels, which we will post after the event."
+        }
+    },
+    "ExplanationElite": {
+        "type1": {
+            "heading": "Logo on participants' and organizers' T-shirts",
+            "details": "We will print your logo on the T-shirts that will be distributed among the participants and organizers of BEST Lviv. This will provide your company with constant visibility among young cybersecurity talents and create a lasting brand effect."
+        },
+        "type2": {
+            "heading": "Participation in the podcast",
+            "details": "We invite you to participate in the ongoing podcast. A representative of the company will be able to share their experience and opinions on the chosen topic. Our team will provide editing and filming, and the podcast will be posted on the BEST Lviv YouTube channel, which will ensure a wide audience reach."
+        },
+        "type4": {
+            "heading": "Access to the participants' CV database",
+            "details": "Get exclusive access to the CV database of participants who have successfully passed the selection process for our CTF competitions. This will allow you to quickly find promising candidates for your company, saving time and resources for the search for new staff."
+        },
+        "type5": {
+            "heading": "Live broadcast on Instagram with a company representative",
+            "details": "We offer to conduct a live broadcast lasting from 30 minutes to 1 hour on the Instagram profile @best_lviv with a representative of the company."
+        }
+    },
+    "ExplanationFlexible": {
+        "type1": {
+            "heading": "Sending out vacancies in the Telegram bot",
+            "details": "The opportunity to post your job openings for the next six months in a Telegram bot specially created for the registration of competition participants. This will allow your company to directly communicate its vacancies to talented cybersecurity professionals, providing quick access to the target audience."
+        },
+        "type2": {
+            "heading": "Post about the company on Instagram",
+            "details": "We will publish a post about your company on the Instagram profile @best_lviv. This post will contain information about the company and will mention that you are one of the main partners of our CTF competitions."
+        },
+        "type3": {
+            "heading": "Nomination from the company",
+            "details": "Your company can come up with its own nomination for the competition and award the winning team in this category. This can be an award for the best use of certain technologies or other unique team achievements, which will allow you to emphasize aspects important to your business and increase your visibility at the event."
+        },
+        "type4": {
+            "heading": "Placing a company banner during the competition",
+            "details": "During the CTF competitions, we will place your banner, which you will provide to us before the start of the competition. This will ensure maximum visibility for the participants and guests of the event and will be an effective way to increase your brand awareness among the target audience."
+        },
+        "type5": {
+            "heading": "Promotion on LinkedIn or TikTok",
+            "details": "Sharing a post on the BEST Lviv LinkedIn page with brief information about your company, company achievements, and partnership information. The text is sent by your company and published during the competition or after the event. Alternatively, we will shoot a personalized video about your company up to 30 seconds in TikTok BEST Lviv. You can choose only one type of promotion from the options offered."
+        },
+        "type6": {
+            "heading": "Access to the participants' CV database",
+            "details": "Get exclusive access to the CV database of participants who have successfully passed the selection process for our CTF competitions. This will allow you to quickly find promising candidates for your company, saving time and resources for the search for new staff."
+        },
+        "type7": {
+            "heading": "Promotion on the information stand",
+            "details": "Your company's promotional video of up to 30 seconds during the week of information stands at Lviv Polytechnic National University (LPNU), which will increase your visibility among students before the competition."
+        }
+    },
+    "additionalOptions": {
+        "heading": "Additional options",
+        "buttonText": "Check details",
+
+        "1": {
+            "heading": "Online webinar or seminar on YouTube",
+            "details": "An opportunity to host a webinar or seminar on our YouTube channel, where you can share your knowledge and expertise with viewers. This will not only increase your brand awareness, but also allow you to interact directly with your target audience, providing valuable information and attracting new fans."
+        },
+        "2": {
+            "heading": "Logo on participants' and organizers' T-shirts",
+            "details": "We will print your logo on the T-shirts that will be distributed among the participants and organizers of BEST Lviv. This will provide your company with constant visibility among young cybersecurity talents and create a lasting brand effect."
+        },
+        "3": {
+            "heading": "Access to the participants' CV database",
+            "details": "Get exclusive access to the CV database of participants who have successfully passed the selection process for our CTF competitions. This will allow you to quickly find promising candidates for your company, saving time and resources for the search for new staff."
+        },
+        "4": {
+            "heading": "Placing a company banner during the competition",
+            "details": "During the CTF competitions, we will place your banner, which you will provide to us before the start of the competition. This will ensure maximum visibility for the participants and guests of the event and will be an effective way to increase your brand awareness among the target audience."
+        },
+        "5": {
+            "heading": "Sending out vacancies in the Telegram bot",
+            "details": "The opportunity to post your job openings for the next six months in a Telegram bot specially created for the registration of competition participants. This will allow your company to directly communicate its vacancies to talented cybersecurity professionals, providing quick access to the target audience."
+        },
+        "7": {
+            "heading": "Nomination from the company",
+            "details": "Your company can come up with its own nomination for the competition and award the winning team in this category. This can be an award for the best use of certain technologies or other unique team achievements, which will allow you to emphasize aspects important to your business and increase your visibility at the event."
+        }
+    },
+    "cartSectionTest": {
+        "heading": "Cart",
+        "headingOffers": "Packages",
+        "additionalOffersHeading": "Additional Options",
+        "salesHeading": "Additional Options",
+        "desc0": "*Payment will be made at the NBU rate",
+        "desc1": "Essential + 3 additional options - $50",
+        "desc2": "Essential + one package - $50",
+        "desc3": "Essential + two packages - $150",
+        "desc4": "*Discounts cannot be combined.",
+
+        "sum": "Total",
+
+        "formHeadings0": "Company Name",
+        "formHeadings1": "Your Email",
+        "formHeadings2": "Submit",
+        "formHeadings3": "Form Successfully Submitted"
+    },
+    "flexibleOfferContent": {
+        "buttonHeading": "Add & Remove"
+    },
+    "offerContent": {
+        "heading": "Offers",
+        "desc": "*10% of the proceeds will be donated to support the Armed Forces of Ukraine"
+    },
+    "partnersSection": {
+        "heading": "Previous partners of BEST"
+    },
+    "organizatorsSection": {
+        "heading": "Event Organizer",
+        "title": "Best Lviv",
+        "description": "BEST Lviv (Board of European Students of Technology) is a chapter of an international non-profit public organization that brings together students of technical specialties. Our mission is to develop students through the exchange of knowledge and cooperation between companies, universities and students in Europe.",
+        "statistics0": {
+            "title": "local groups",
+            "desc": "Almost in all European countries",
+            "value": 85
+        },
+        "statistics1": {
+            "title": "countries",
+            "desc": "More than 15,000 BESTies worldwide",
+            "value": 30
+        },
+        "statistics2": {
+            "title": "years of experience",
+            "desc": "Since 1989, we have been facilitating cooperation and communication among students of technical specialties",
+            "value": 35
+        }
+    },
+    "contactsSection": {
+        "title": "Contacts",
+        "name_surname1": "Victor Gavryliuk",
+        "name_surname2": "Victoria Shevchenko",
+        "name_surname3": "Anna Hashchuk",
+        "description1": "Main Organizer",
+        "description2": "Responsible for Corporate Relations"
+    },
+    "emailMessage": {
+        "subjectHeading": "Confirmation of participation in Capture the Flag",
+
+        "greating": "Congratulations",
+        "greatingDesc1": "You are one step closer to participating in",
+        "greatingDesc2": "BEST CTF",
+        "greatingDesc3": "as a partner!",
+
+        
+        "packageHeading": "Your choice of cooperation options looks like this:",
+        "packageNameHeading": "Package name",
+        "costHeading": "Cost (USD)",
+        "packagePriceHeading": "Total",
+        "additionalOptionsHeading": "Options name",
+        "totalPriceHeadingDiscount": "Total cost after discount",
+        "totalPriceHeading": "Total cost",
+        "discountDesc1": "1. When purchasing three additional options at once, a discount of $50 is provided",
+        "discountDesc2": " 2. When purchasing two packages at once, a discount of $50 is provided",
+        "discountDesc3": "  3. When purchasing three packages at once, a discount of $150 is provided",
+        "discountDesc4": "* Discounts cannot be combined.",
+        "description2": "Expect to be contacted by the project organizers very soon to clarify the details and confirm your participation. If you have any questions, please contact us using the contact information below.",
+        "farewell": "See you at BEST CTF!",
+
+        "name_surname2": "Victoria Shevchenko",
+        "name_surname3": "Anna Hashchuk",
+        "coreteam2": "responsible for Corporate Relations"
+
+    }
+}

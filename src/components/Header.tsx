@@ -3,12 +3,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MenuIcon } from "lucide-react";
-import * as Dialog from "@radix-ui/react-dialog";
+
 
 import useSmoothScrollTo from "@/hooks/useSmoothScrollTo";
 import Drawer from "./Drawer";
 import { Button } from "./ui/button";
-import { headerNavigation } from "./_content/_content";
+import { headerNavigation } from "../app/(_content)/_content";
 
 import Logo from "@/public/logo.svg";
 
@@ -35,7 +35,7 @@ export default function Header() {
         </div>
 
         <div className="hidden xl:flex gap-4 items-center">
-          {headerNavigation.map((nav_item) => (
+          {headerNavigation().map((nav_item) => (
             <Button
               variant={"ghost"}
               onClick={() => {
@@ -50,13 +50,13 @@ export default function Header() {
         <button className="xl:hidden" onClick={() => setMobileMenuOpen(true)}>
           <MenuIcon strokeWidth={1.5} size={40} />
         </button>
-       
+
       </div>
       <Drawer
-          setMobileMenuOpen={setMobileMenuOpen}
-          navigation={headerNavigation}
-          mobileMenuOpen={mobileMenuOpen}
-        />
+        setMobileMenuOpen={setMobileMenuOpen}
+        navigation={headerNavigation()}
+        mobileMenuOpen={mobileMenuOpen}
+      />
     </motion.header>
   );
 }

@@ -6,11 +6,12 @@ export interface iSellingPoint {
   annotation?: string;
   services: string[];
   selectedCheckboxesProps?: string[];
-  setSelectedCheckboxes?: any
+  setSelectedCheckboxes?: any,
+  explanation?: dataItem[];
 }
 
 export interface iOptional {
-  index?: number,
+  index?: string,
   name: string;
   price: number;
   active: boolean;
