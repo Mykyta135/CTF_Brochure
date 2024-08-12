@@ -47,7 +47,7 @@ const Offer = ({
 
   const handleModal = ({ name, modalData }: ModalParams) => {
     dispatch(toggleModal({ name, modalData }))
-    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`
+    // document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`
   };
   const selectedCheckboxes = useSelector((state: RootState) => state.selectedCheckboxes.selectedCheckboxes);
 
@@ -59,7 +59,7 @@ const Offer = ({
     } else {
       dispatch(addSelected(name));
     }
-    console.log(selectedCheckboxes);
+    (selectedCheckboxes);
   };
 
 

@@ -13,7 +13,7 @@ const optionalPacketsSlice = createSlice({
     reducers: {
         toggleOptionActive: (state, action: PayloadAction<string>) => {
             const name = action.payload;
-            console.log(name);
+            (name);
             const option = state.find(sp => sp.index === name);
             if (option) {
                 option.active = !option.active;
