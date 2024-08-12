@@ -59,7 +59,7 @@ const Offer = ({
     } else {
       dispatch(addSelected(name));
     }
-    console.log(selectedCheckboxes);
+    (selectedCheckboxes);
   };
 
 

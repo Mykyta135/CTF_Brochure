@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 
 const Option = ({ price, active, name, index }: iOptional) => {
   const dispatch = useDispatch();
-  console.log(index);
+  (index);
   const handleToggleOption = () => {
     dispatch(toggleOptionActive(String(index)));
   };

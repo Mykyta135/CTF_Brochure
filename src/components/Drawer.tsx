@@ -29,7 +29,7 @@ export default function Drawer({
   const handleScrollClick = useSmoothScrollTo();
 
   useEffect(() => {
-    console.log(mobileMenuOpen);
+    (mobileMenuOpen);
     // Toggle body overflow when the drawer opens or closes
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -53,7 +53,7 @@ export default function Drawer({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3}}
+            transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-black bg-opacity-50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
           />
@@ -69,7 +69,7 @@ export default function Drawer({
             <div className="flex justify-between w-full mb-7">
               <div
                 onClick={() => {
-                handleScrollClick("#top");setMobileMenuOpen(false) ;
+                  handleScrollClick("#top"); setMobileMenuOpen(false);
                 }}
                 className="cursor-pointer z-50 text-2xl sm:w-20 w-16"
               >

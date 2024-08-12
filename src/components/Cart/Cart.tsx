@@ -172,10 +172,10 @@ export default function Cart() {
 
     emailjs.send(serviceId, templateId, templateParams, publicKey).then(
       (result) => {
-        console.log(result.text);
+        (result.text);
       },
       (error) => {
-        console.log(error.text);
+        (error.text);
       }
     );
   };
