@@ -14,12 +14,10 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden text-neutral-50 ">
       <Header />
-
-      <main className="flex min-h-screen flex-col space-y-20 items-center justify-between overflow-x-hidden">
-
-        <IntroSection />
+      <IntroSection />
+      <main className="flex min-h-screen flex-col space-y-20 items-center justify-between overflow-x-hidden bg-gradient-to-b from-[#101010] to-[#141414]">
         <DescriptionSection />
         <ForPartners />
         <Why />
@@ -31,7 +29,7 @@ export default function Home() {
         <Contacts />
       </main>
       <Footer />
-    </>
+    </div>
 
   );
 

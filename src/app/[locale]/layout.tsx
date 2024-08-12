@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: "Partnership CTF",
   description: "Best Capture The Flag partnership offer",
 };
-import { ThemeProvider } from "@/components/ColorTheme/theme-provider";
 
 export default async function RootLayout({
   children,
@@ -22,12 +21,10 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
 
-      <body>
-        <ThemeProvider>
+      <body className="bg-[#141414]">
           <NextIntlClientProvider messages={messages}>
             {children}
           </NextIntlClientProvider>
-        </ThemeProvider>
       </body>
 
     </html>

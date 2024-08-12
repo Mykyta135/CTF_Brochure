@@ -14,7 +14,7 @@ export default function IntroSection() {
     const handleScrollClick = useSmoothScrollTo();
     const t = useTranslations("intro");
     return (
-        <section id="top" className="relative flex w-screen h-screen bg-gradient-to-t from-[#101012] to-[#0c0c0ca9]">
+        <section id="top" className="relative flex w-screen h-screen bg-gradient-to-t from-[#101012] to-[#101012b4]">
             <div className="absolute top-0 left-0 w-full h-full -z-50  pt-20">
                 <Image alt={"introBg"} src={heroBg} className="absolute top-0 left-0 w-full h-full aspect-video object-cover" />
             </div>
