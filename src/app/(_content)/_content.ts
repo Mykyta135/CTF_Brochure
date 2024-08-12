@@ -572,6 +572,9 @@ export const cartSection = () => {
     desc3: t("desc3"),
     desc4: t("desc4"),
 
+    error1: t("errorHeading1"),
+    error2: t("errorHeading2"),
+
     sum: t("sum"),
 
     formHeadings0: t("formHeadings0"),

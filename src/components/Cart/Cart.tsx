@@ -35,8 +35,8 @@ import { useTranslations } from "next-intl";
 const formSchema = z.object({
   company_name: z
     .string()
-    .min(3, "Назва компанії повинна містити мінімум 3 символа"),
-  company_email: z.string().email("Невірний адрес електронної пошти"),
+    .min(3, "Minimum 3 characters"),
+  company_email: z.string().email("Invalid email address"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -172,10 +172,10 @@ export default function Cart() {
 
     emailjs.send(serviceId, templateId, templateParams, publicKey).then(
       (result) => {
-        (result.text);
+        console.log(result.text);
       },
       (error) => {
-        (error.text);
+        console.log(error.text);
       }
     );
   };
