@@ -32,7 +32,7 @@ export default function Home({
         <Statistics />
         <Customers />
         <Providers>
-          <h2 className="text-5xl ">Пропозиція</h2>
+          <h2 className="text-5xl " id="offers">Пропозиція</h2>
           {children}
         </Providers>
         <Partners />
