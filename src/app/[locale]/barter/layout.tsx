@@ -12,8 +12,15 @@ import Why from "@/components/Why/Why"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PartnershipSection from "@/components/Cart/PartnershipSection"
+import { Provider } from "react-redux"
+import Providers from "@/redux/Providers"
 
-export default function Home() {
+export default function Home({
+  children,
+}: {
+  children: React.ReactNode
+}
+) {
   return (
     <div className="overflow-x-hidden text-neutral-50 ">
       <Header />
@@ -24,9 +31,10 @@ export default function Home() {
         <Why />
         <Statistics />
         <Customers />
-
-        <PartnershipSection />
-
+        <Providers>
+          <h2 className="text-5xl ">Пропозиція</h2>
+          {children}
+        </Providers>
         <Partners />
         <Organizators />
         <Contacts />

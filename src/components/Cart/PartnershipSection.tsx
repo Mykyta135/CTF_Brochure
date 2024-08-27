@@ -22,9 +22,11 @@ const Section = () => {
 };
 
 export default function PartnershipSection() {
-  return (
-    <Providers >
-      <Section />
-    </Providers>
+  return (<Providers  >
+    <Section />
+  </Providers >
   );
+
 }
+
+

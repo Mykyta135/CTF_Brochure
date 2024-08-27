@@ -104,7 +104,7 @@ const OPT = ({ index, name, price }: iOptional) => {
   );
 };
 
-export default function Cart() {
+export default function   Cart() {
   const cartSectionTest = cartSection();
   const flexiblePoints = useSelector((state: RootState) => state.selectedCheckboxes);
 

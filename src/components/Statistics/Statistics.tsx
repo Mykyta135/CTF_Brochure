@@ -9,7 +9,7 @@ const Statistics = () => {
         <section className='container' id="statistics">
             <motion.span initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}>
-                <h2 className=' text-3xl  md:text-5xl  mb-16 text-center'>{statisticsSection().title}</h2>
+                <h2 className='text-3xl  md:text-5xl  mb-16 text-center'>{statisticsSection().title}</h2>
                 <div className="flex items-center flex-wrap md:justify-between justify-evenly gap-10 text-xl mb-36">
                     {statisticsSection().items.map((item, index) => (
                         <a href={item.link} target="_blank" key={index} className="flex items-center basis-36 gap-2 rounded ">
